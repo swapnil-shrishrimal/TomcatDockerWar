@@ -28,7 +28,7 @@ stage("Docker build") {
 stage("Deploy to staging") {
      steps {
  
-          sh "docker run -d -it -v /var/lib/jenkins/workspace/DockerPipelineProject/target/:/usr/local/tomcat/webapps/ -p 8090:8080 --name Testtomcat swapnil_tomcat"
+          sh "docker run -d -it -v /var/lib/jenkins/workspace/DockerJenkins/target/:/usr/local/tomcat/webapps/ -p 8090:8080 --name Testtomcat swapnil_tomcat"
      }
 }
 
